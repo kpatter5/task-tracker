@@ -19,7 +19,6 @@ const secret = process.env.SECRET || "s3c3ogh3yx1493";
 
 // Store session in Mongo Atlas database
 const databaseUrl = process.env.DATABASE_URL || "mongodb://localhost:27017/taskTrackerApp";
-console.log("database url=", databaseUrl);
 const store = mongoStore.create({
     mongoUrl: databaseUrl,
     touchAfter: 24 * 60 * 60, // refresh after 24 hours (seconds)
