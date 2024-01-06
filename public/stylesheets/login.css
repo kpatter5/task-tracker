@@ -14,3 +14,54 @@
     --brand-color11: #FFFB73;
     --brand-color12: #F5EAEA;
   }
+
+  .login-grid-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-row-gap: 20px;
+    grid-template-areas: "a5 a5 . ."
+    "b5 b5 . . "
+    "c5 c5 . . "
+    "d5 d5 . .";
+  }
+
+  .login-item-a{
+    grid-area: a5;
+    margin-top: 2%;
+  }
+
+  .login-item-b{
+    grid-area: b5;
+    margin-top: 5%;
+  }
+
+.login-form-grid-container{
+    display: grid;
+    max-width: 200px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "a6 a6 "
+    "b6 b6 "
+    "c6 c6 "
+    "d6 d6 ";
+}
+
+.login-form-item-a{
+  grid-area: a6;
+  margin-bottom: 2%;
+}
+
+.login-form-item-b{
+  grid-area: b6;
+  margin-bottom: 2%;
+}
+
+.login-form-item-c{
+  grid-area: c6;
+  margin-bottom: 2%;
+}
+
+.login-form-item-d{
+  grid-area: d6;
+  margin-bottom: 2%;
+}

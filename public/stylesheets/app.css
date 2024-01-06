@@ -235,3 +235,10 @@ a.black-link:hover{
     text-decoration: underline;
     color: rgb(116, 113, 113);
 }
+
+.form-label{
+    font-family: 'Noto Sans', sans-serif;
+    color:rgb(101, 101, 101);
+    font-weight: 600px;
+    font-size: 18px;
+}

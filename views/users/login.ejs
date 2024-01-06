@@ -1,28 +1,29 @@
 <% layout('layouts/boilerplate') %>
 
-<div class="home-grid-container">
-  <div class=" home-item-a">
+<div class="login-grid-container">
+  <div class="login-item-a">
     <h1 class="header">Log In</h1>
   </div>
 
-  <div class="home-item-d">
+  <div class="login-item-b">
     <form action="/login" method="POST" class="validated-form" novalidate>
-
-      <div class="col-6 my-3">
-        <input type="text" class="form-control" placeholder="username" name="username" required>
+      <div class="login-form-item-a">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" name="username" required>
         <div class="valid-feedback">Looks good!</div>
       </div>
 
-      <div class="col-6 my-3">
-        <input type="text" class="form-control" placeholder="password" name="password" required>
+      <div class="login-form-item-b">
+        <label for="Password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" required>
         <div class="valid-feedback">Looks good!</div>
       </div>
 
-      <button class="blue-button">Submit</button>
-      <button type="button" class="magenta-button"><a href="/register">Register</a></button>
-
+      <div class="login-form-item-c">
+        <button class="blue-button mt-2">Submit</button>
+        <button type="button" class="magenta-button"><a href="/register">Register</a></button>
+      </div>
     </form>
-
   </div>
 
 </div>
