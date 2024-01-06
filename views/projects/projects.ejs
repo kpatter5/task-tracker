@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="projects-layout-container">
+  <div class="projects-item-a1">
+    <h1 class="header">My Tasks</h1>
+  </div>
+
+  <div class="projects-item-b1">
+    <button class="blue-button"><a href="/projects/new">Add Project</a></button>
+    <button class="blue-button"><a href="/projects/edit">Edit Projects</a></button>
+  </div>
+
+  <div class="projects-item-c1 main">
+    <div class="medium-header">Viewing Tasks for:</div>
+    <form action="/fdjslka" method="GET" id="projectsFormProjectsPage">
+      <% if (projects.length != 0) { %>
+      <select class="dropdown" id="selectedProject2" onchange="updateFormAction('projectsFormProjectsPage', 'selectedProject2')">
+        <option id="projects-default-form-select" value="/projects" selected="true" disabled="true">--</option>
+        <% for (let i = 0; i < projects.length; i++) {%>
+        <option id="projects-<%=projects[i].projectName%>-form-select" value='/tasks/<%=projects[i]._id%>'><%=projects[i].projectName%></option>
+        <% } %>
+      </select>
+    </form>
+
+    <% } else { %>
+    <div class="row mt-3 mx-3">
+      -- No projects --
+    </div>
+
+    <% } %>
+  </div>
+
+  <div class="projects-item-d1">
+    <div class="row my-3">
+      <span class="col-3 mx-3">
+        <a class="blue-link" href="/tasks">View All Tasks</a>
+      </span>
+    </div>
+  </div>
+</div>

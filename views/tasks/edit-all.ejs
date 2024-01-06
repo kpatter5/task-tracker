@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="tasks-layout-container">
+  <div class="tasks-item-a">
+    <h1 class="header">Edit Task</h1>
+  </div>
+
+  <div class="tasks-item-c">
+    <form action="/tasks/<%=task._id%>/all/edit" method="POST" id="task-form-grid-container" class="validated-form" novalidate>
+      <div class="task-form-item-h1">
+        <!-- HEADER ROW: Left margin to align with ol -->
+        <h6 class="black-header">Item Name</h6>
+      </div>
+
+      <div class="task-form-item-h2">
+        <h6 class="black-header">Owner</h6>
+      </div>
+
+      <div class="task-form-item-h3">
+        <h6 class="black-header">% Complete</h6>
+      </div>
+
+      <div class="task-form-item-h4">
+        <h6 class="black-header">Due Date</h6>
+      </div>
+
+      <div class="task-form-item-h5">
+        <!-- Empty column -->
+      </div>
+
+      <div class="task-form-item-v1">
+        <input type="text" class="form-control" placeholder="<%=task.name%>" value="<%=task.name%>" name="name" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="task-form-item-v2">
+        <input type="text" class="form-control" placeholder="<%=task.owner%>" value="<%=task.owner%>" name="owner" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="task-form-item-v3">
+        <input type="number" class="form-control" placeholder="<%=task.percentComplete%>%" value="<%=task.percentComplete%>" name="percentComplete" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="task-form-item-v4">
+        <input type="date" class="form-control" placeholder="<%=task.dueDate%>" value="<%=task.dueDate%>" name="dueDate" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <input type="hidden" name="project" value="<%=task.project%>">
+      <input type="hidden" name="user" value="<%=currentUser._id%>">
+
+      <div class="task-form-item-v5">
+        <button class="blue-button">Save</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

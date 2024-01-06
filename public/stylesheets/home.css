@@ -1,0 +1,71 @@
+:root {
+    --brand-color1: #8758FF;
+    --brand-color2: #5CB8E4;
+    --brand-color3: #181818;
+    --brand-color4: #F2F2F2;
+    --brand-color5: #F2F7A1;
+    --brand-color6: #46C2CB;
+    --brand-color7: #6D67E4;
+    --brand-color8: #453C67;
+    
+    /* Lesser used colors */
+    --brand-color9: #FFA33C;
+    --brand-color10: #B15EFF;
+    --brand-color11: #FFFB73;
+    --brand-color12: #F5EAEA;
+  }
+
+.home-grid-container{
+    display: grid;
+    grid-template-columns: 50px;
+    grid-template-rows: auto;
+    grid-template-areas: "b a a a a"
+    "b d d d c"
+    "b d d d c"
+    "b d d d c";
+}
+ 
+.home-item-a{
+    grid-area: a;
+    margin-bottom: 2%;
+}
+
+.home-item-b{
+    grid-area: b;
+}
+
+.home-item-c{
+    grid-area: c;
+}
+
+.home-item-d{
+    grid-area: d;
+    margin-top: 20px;
+}
+
+.contact-form-container{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-template-rows: auto;
+    grid-area: "a4 a4 . . "
+    "b4 b4 b4 b4"
+    "c4 c4 c4 c4"
+    "d4 d4 d4 d4";
+}
+
+.contact-form-item-a{
+    grid-area: a4;
+}
+
+.contact-form-item-b{
+    grid-area: b4;
+}
+
+.contact-form-item-c{
+    grid-area: c4;
+}
+
+.contact-form-item-d{
+    margin-top: 20px;
+    grid-area: d4;
+}

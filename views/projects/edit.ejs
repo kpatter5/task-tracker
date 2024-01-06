@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="projects-layout-container">
+  <div class="projects-item-a1">
+    <h1 class="header">Edit Projects</h1>
+  </div>
+
+  <div class="projects-item-c1">
+    <form action="/fdjslka?_method=DELETE" method="POST" id="deleteProjForm">
+      <% if (projects.length != 0) { %>
+      <select class="dropdown" id="projectToDelete">
+        <option selected="true" disabled="true">Choose Project</option>
+        <% for (let i = 0; i < projects.length; i++) {%>
+        <option value='/projects/<%=projects[i]._id%>?_method=DELETE'><%=projects[i].projectName%></option>
+        <% } %>
+      </select>
+      <button class="blue-button" onclick="updateFormAction('deleteProjForm', 'projectToDelete')">Delete Project</button>
+    </form>
+
+    <% } else { %>
+    <div class="row mt-3 mx-3">
+      -- No projects --
+    </div>
+    <% } %>
+
+  </div>
+</div>

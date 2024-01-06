@@ -1,0 +1,237 @@
+:root {
+    --brand-color1: #8758FF;
+    --brand-color2: #5CB8E4;
+    --brand-color3: #181818;
+    --brand-color4: #F2F2F2;
+    --brand-color5: #F2F7A1;
+
+    --brand-color17: #FFECD6;
+    --brand-color18: #4CB9E7;
+    --brand-color19: #3559E0;
+    --brand-color20: #0F2167;
+
+    --brand-color-21: #4D77FF;
+    --brand-color-22: #56BBF1;
+    --brand-color-23: #5EE6EB;
+    --brand-color-24: #F2FA5A;
+
+    --brand-color-25: #E8F79A;
+    --brand-color-26: #49D292;
+    --brand-color-27: #3B445B;
+    --brand-color-28: #383746;
+
+    --brand-color-29: #F64662;
+    --brand-color-30: #C61951;
+    --brand-color-31: #741938;
+    --brand-color-32: #56132A;
+
+    --brand-color6: #46C2CB;
+    --brand-color7: #6D67E4;
+    --brand-color8: #453C67;
+    --brand-color2a: #99d0e9;
+    
+    /* Lesser used colors */
+    --brand-color9: #FFA33C;
+    --brand-color10: #B15EFF;
+    --brand-color11: #FFFB73;
+    --brand-color12: #F5EAEA;
+
+    --brand-color13: #F4F4F4;
+    --brand-color14: #6DECB9;
+    --brand-color15: #11999E;
+    --brand-color16: #3C3C3C;
+
+  }
+
+.brand-color1{
+    color: #8758FF;
+}
+
+.brand-color2{
+    color: #5CB8E4;
+}
+
+.brand-color3{
+    color: #181818;
+}
+
+.brand-color4{
+    color: #F2F2F2;
+}
+
+.brand-logo{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--brand-color7);
+    font-weight: 900px;
+    text-decoration: none;
+    margin-right: 1%;
+}
+
+.brand-logo:hover{
+    color: var(--brand-color7);
+    text-decoration: none;
+}
+
+.header{
+    color: var(--brand-color1);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 900px;
+}
+
+.margin-top-3pct{
+    margin-top: 3%;
+}
+
+.main{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400px;
+    color: var(--brand-color3);
+}
+
+.light-blue-button{
+    text-decoration: none;
+    background-color: #c2dff7;
+    border-color: #c2dff7;
+    color: #5065db;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.light-blue-button:hover{
+    background-color: #a7cceb;
+    border-color: #a7cceb;
+    color: #5065db;
+}
+
+.blue-button{
+    margin-bottom: 1%;
+    background-color: var(--brand-color2);
+    border-color: var(--brand-color2);
+    color: var(--brand-color4);
+    text-decoration: none;
+
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.blue-button:hover{
+    background-color: var(--brand-color2a);
+    border-color: #9fbcc9;
+    color: var(--brand-color4);
+    text-decoration: none;
+}
+
+.blue-button a{
+    color: var(--brand-color4);
+    text-decoration: none;
+}
+
+.blue-button a:hover{
+    color: var(--brand-color4);
+    text-decoration: none;
+}
+
+.magenta-button {
+    margin-bottom: 1%;
+    background-color: #F64662;
+    border-color: #F64662;
+    color: var(--brand-color4);
+    text-decoration: none;
+
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.magenta-button:hover{
+    background-color: #f48295;
+    border-color: #f48295;
+    color: var(--brand-color4);
+    text-decoration: none;
+}
+
+.magenta-button a{
+    color: var(--brand-color4);
+    text-decoration: none;
+}
+
+.magenta-button a:hover{
+    color: var(--brand-color4);
+    text-decoration: none;
+}
+
+
+.black-header{
+    font-weight: 600;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--brand-color3);
+    font-size: 18px;
+}
+
+.black-header-large{
+    font-weight: 600;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--brand-color3);
+    font-size: 27px;
+}
+
+.black-header-semibold{
+    font-weight: 600px;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--brand-color3);
+    font-size: 16px;
+}
+
+.medium-header{
+    font-weight: lighter;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--brand-color-16);
+    font-size: 22px;
+}
+
+.red-subheader{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.dropdown{
+    display: inline-flex;
+    border: 1px solid rgb(230, 225, 230);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    outline: 0px;
+    text-indent: 4px;
+    -webkit-appearance: none;
+    margin: 0.5rem;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.dropdown:focus{
+    border-color: white;
+    outline: 0px;
+    filter: drop-shadow(0 0 0.2rem #58a0ec);
+}
+
+.dropdown:active{
+    border-color: white;
+    outline: 0px;
+    filter: drop-shadow(0 0 0.2rem #58a0ec);
+}
+
+.dropdown-item{
+    border: none;
+    outline: 0px;
+}
+
+a.black-link{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+a.black-link:hover{
+    text-decoration: underline;
+    color: rgb(116, 113, 113);
+}

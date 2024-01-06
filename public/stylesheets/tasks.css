@@ -1,0 +1,198 @@
+:root {
+    --brand-color1: #8758FF;
+    --brand-color2: #5CB8E4;
+    --brand-color3: #181818;
+    --brand-color4: #F2F2F2;
+    --brand-color5: #F2F7A1;
+    --brand-color6: #46C2CB;
+    --brand-color7: #6D67E4;
+    --brand-color8: #453C67;
+    
+    /* Lesser used colors */
+    --brand-color9: #FFA33C;
+    --brand-color10: #B15EFF;
+    --brand-color11: #FFFB73;
+    --brand-color12: #F5EAEA;
+
+  }
+
+/* Grid for tasks page layout */
+.tasks-layout-container{
+    margin-left: 2%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-column-gap: 1%;
+    grid-template-areas: "a a a a"
+    "b b b b"
+    "g g g g"
+    "c c c c"
+    "d d d d"
+    "e e e e"
+    "f f f f"
+    "h h h h";
+}
+
+.tasks-item-a{
+    grid-area: a;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    display: flex;
+}
+
+.tasks-item-b{
+    grid-area: b;
+    margin-bottom: 20px;
+}
+
+.tasks-item-g{
+    grid-area: g;
+    margin-bottom: 4%;
+}
+
+.tasks-item-c{
+    grid-area: c;
+    margin-bottom: 40px;
+}
+
+.tasks-item-d{
+    grid-area: d;
+}
+
+.tasks-item-d ol li {
+    margin-bottom: 1%;
+    display: flex;
+}
+
+.tasks-item-d ol li a{
+    color: var(--brand-color2);
+    margin-left: 2%;
+    display: flex;
+}
+
+.tasks-item-d ol li a:hover{
+    color: var(--brand-color2a);
+}
+
+.tasks-item-e {
+    grid-area: e;
+}
+
+.tasks-item-f {
+    grid-area: f;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.tasks-item-h {
+    grid-area: h;
+    margin-top: 20px;
+}
+
+/* Grid for tasks list */
+.tasks-list-container{
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 30% 10% 10% 10% 20% 10%;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-template-areas: "a1 b1 c1 d1 e1 f1";
+}
+
+.tasks-list-item-a1{
+    grid-area: a1;  
+}
+
+.tasks-list-item-b1{
+    grid-area: b1;  
+}
+
+.tasks-list-item-c1{
+    grid-area: c1;   
+}
+
+.tasks-list-item-d1{
+    grid-area: d1; 
+}
+
+.tasks-list-item-e1{
+    grid-area: e1; 
+    justify-content: center;
+    display: flex; 
+}
+
+/* Grid for task form */
+#task-form-grid-container{
+    display: grid;
+    grid-template-columns: 20% 20% 10% 20% 10% 0%;
+    grid-template-rows: auto;
+    grid-template-areas: "h1 h2 h3 h4 h5 h6 "
+    "v1 v2 v3 v4 v5 v6";
+    justify-content: space-between;
+    grid-column-gap: 15px;
+}
+
+.task-form-item-h1{
+    grid-area: h1;  
+}
+
+.task-form-item-h2{
+    grid-area: h2;  
+}
+
+.task-form-item-h3{
+    grid-area: h3; 
+}
+
+.task-form-item-h4{
+    grid-area: h4; 
+}
+
+.task-form-item-h5{
+    grid-area: h5;  
+}
+
+.task-form-item-h6{
+    grid-area: h6;   
+}
+
+.task-form-item-v1{
+    grid-area: v1; 
+}
+
+.task-form-item-v2{
+    grid-area: v2;  
+}
+
+.task-form-item-v3{
+    grid-area: v3;  
+}
+
+.task-form-item-v4{
+    grid-area: v4;  
+}
+
+.task-form-item-v5{
+    grid-area: v5;  
+}
+
+.task-form-item-v6{
+    grid-area: v6;  
+}
+
+a.blue-link{
+    color: var(--brand-color2);
+    text-decoration: none;
+}
+
+a.blue-link:hover{
+    color: var(--brand-color2a);
+    text-decoration: underline;
+}
+
+task-prev-button.disabled{
+    color: rgb(14, 42, 137);
+    text-decoration: none;
+    pointer-events: none;
+}

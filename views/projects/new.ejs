@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="projects-layout-container">
+  <div class="projects-item-a1">
+    <h1 class="header">New Project</h1>
+  </div>
+
+  <div class="projects-item-b1">
+    <form action="/projects/new" method="POST" id="project-form-grid-container" class="validated-form" novalidate>
+      <div class="project-form-item-h1">
+        <h6 class="black-header">Project Name</h6>
+      </div>
+
+      <div class="project-form-item-h2">
+        <h6 class="black-header">Members</h6>
+      </div>
+
+      <div class="project-form-item-h3">
+        <h6 class="black-header">% Complete</h6>
+      </div>
+
+      <div class="project-form-item-h4">
+        <h6 class="black-header">Finish Date</h6>
+      </div>
+
+      <div class="project-form-item-v1">
+        <input type="text" class="form-control" placeholder="My Project" name="projectName" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="project-form-item-v2">
+        <input type="text" class="form-control" placeholder="Jane Doe, John Smith" name="members" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="project-form-item-v3">
+        <input type="text" class="form-control" placeholder="0%" name="percentComplete">
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="project-form-item-v4">
+        <input type="date" class="form-control" placeholder="12/31/2024" name="finishDate" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <input type="hidden" name="user" value="<%=currentUser._id%>">
+
+      <div class="project-form-item-s1">
+        <button class="blue-button">Add Project</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

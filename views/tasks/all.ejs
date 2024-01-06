@@ -1,0 +1,96 @@
+<% layout('layouts/boilerplate') %>
+<div class="tasks-layout-container">
+  <div class="tasks-item-a">
+    <h1 class="header">My Tasks</h1>
+  </div>
+
+  <div class="tasks-item-g">
+    <span class="black-header">
+      Viewing All Tasks
+    </span>
+  </div>
+
+  <div class="tasks-item-c">
+    <span class="col-3">
+      <a class="blue-link" href="/projects">Project View</a>
+    </span>
+  </div>
+
+  <div class="tasks-item-d">
+    <div class="tasks-list-container">
+      <% if (tasks.length == 0) { %>
+      <div class="tasks-list-item-a1">
+        - - No tasks - -
+      </div>
+      <% } else { %>
+
+      <!-- HEADERS -->
+      <div class="tasks-list-item-a1">
+        <span class="black-header">Item Name</span>
+      </div>
+
+      <div class="tasks-list-item-b1">
+        <span class="black-header">Owner</span>
+      </div>
+
+      <div class="tasks-list-item-c1">
+        <span class="black-header">Progress</span>
+      </div>
+
+      <div class="tasks-list-item-d1">
+        <span class="black-header">Due Date</span>
+      </div>
+
+      <% } %>
+
+    </div>
+  </div>
+
+  <div class="tasks-item-e" id="all-tasks-container">
+    <!-- TASK LIST -->
+    <ol class="list-group">
+      <% for (let i = 0; i < tasks.length; i++) { %>
+      <li class="list-group-item all-tasks">
+        <div class="tasks-list-container">
+          <div class="tasks-list-item-a1">
+            <%=tasks[i].name%>
+          </div>
+          <div class="tasks-list-item-b1">
+            <%=tasks[i].owner%>
+          </div>
+          <div class="tasks-list-item-c1">
+            <%=tasks[i].percentComplete%>%
+          </div>
+          <div class="tasks-list-item-d1">
+            <%=tasks[i].dueDate%>
+          </div>
+          <div class="tasks-list-item-e1">
+            <form action="/tasks/<%=tasks[i]._id%>/all/edit" method="GET">
+              <button class="light-blue-button" id="edit-button">Edit</button>
+            </form>
+          </div>
+
+          <div class="tasks-list-item-f1">
+            <form action="/tasks/<%=tasks[i]._id%>?_method=DELETE" method="POST">
+              <button class="btn-close" aria-label="Close" onclick="return confirmDelete()"></button>
+            </form>
+          </div>
+
+        </div>
+      </li>
+      <% } %>
+    </ol>
+  </div>
+
+  <div class="tasks-item-f">
+    <nav>
+      <ul class="pagination" id="all-tasks-pagination">
+        <li><a class="page-link" href="#" id="all-tasks-prev-button">Previous</a></li>
+        <li><a class="page-link" href="#" id="all-tasks-next-button">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="tasks-item-h"></div>
+
+</div>
