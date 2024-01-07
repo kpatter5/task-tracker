@@ -131,10 +131,10 @@
     text-decoration: none;
 }
 
-.magenta-button {
+.dark-blue-button {
     margin-bottom: 1%;
-    background-color: #F64662;
-    border-color: #F64662;
+    background-color: #3559E0;
+    border-color: #3559E0;
     color: var(--brand-color4);
     text-decoration: none;
 
@@ -142,23 +142,50 @@
     border-radius: 0.4rem;
 }
 
-.magenta-button:hover{
-    background-color: #f48295;
-    border-color: #f48295;
+.dark-blue-button:hover{
+    background-color: #7890e3;
+    border-color: #5473e0;
     color: var(--brand-color4);
     text-decoration: none;
 }
 
-.magenta-button a{
+.dark-blue-button a{
     color: var(--brand-color4);
     text-decoration: none;
 }
 
-.magenta-button a:hover{
+.dark-blue-button a:hover{
     color: var(--brand-color4);
     text-decoration: none;
 }
 
+.blue-outline-button {
+    margin-bottom: 1%;
+    background-color: white;
+    border-color: var(--brand-color19);
+    color: var(--brand-color19);
+    text-decoration: none;
+
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.blue-outline-button:hover{
+    background-color: white;
+    border-color: var(--brand-color19);
+    color: var(--brand-color19);
+    text-decoration: underline;
+}
+
+.blue-outline-button a{
+    color: var(--brand-color19);
+    text-decoration: none;
+}
+
+.blue-outline-button a:hover{
+    color: var(--brand-color19);
+    text-decoration: underline;
+}
 
 .black-header{
     font-weight: 600;

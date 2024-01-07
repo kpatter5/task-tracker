@@ -5,14 +5,16 @@
   </div>
 
   <div class="tasks-item-g">
-    <span class="black-header">
+    <span class="medium-header">
       Viewing All Tasks
     </span>
   </div>
 
   <div class="tasks-item-c">
     <span class="col-3">
-      <a class="blue-link" href="/projects">Project View</a>
+      <button class="blue-outline-button">
+        <a href="/projects">Project View</a>
+      </button>
     </span>
   </div>
 
@@ -20,7 +22,9 @@
     <div class="tasks-list-container">
       <% if (tasks.length == 0) { %>
       <div class="tasks-list-item-a1">
-        - - No tasks - -
+        <div class="medium-header">
+          - - No tasks - -
+        </div>
       </div>
       <% } else { %>
 

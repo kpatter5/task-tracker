@@ -14,12 +14,14 @@
         <option value='/projects/<%=projects[i]._id%>?_method=DELETE'><%=projects[i].projectName%></option>
         <% } %>
       </select>
-      <button class="blue-button" onclick="updateFormAction('deleteProjForm', 'projectToDelete')">Delete Project</button>
+      <button class="btn btn-outline-danger" onclick="return confirmDeleteAndUpdateFormAction('deleteProjForm', 'projectToDelete')">Delete Project</button>
     </form>
 
     <% } else { %>
     <div class="row mt-3 mx-3">
-      -- No projects --
+      <div class="medium-header">
+        -- No projects --
+      </div>
     </div>
     <% } %>
 

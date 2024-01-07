@@ -8,12 +8,16 @@
   <div class="projects-item-b1">
     <button class="blue-button"><a href="/projects/new">Add Project</a></button>
     <button class="blue-button"><a href="/projects/edit">Edit Projects</a></button>
+    <button class="blue-outline-button">
+      <a href="/tasks">View All Tasks</a>
+    </button>
   </div>
 
   <div class="projects-item-c1 main">
+    <% if (projects.length != 0) { %>
+    <% console.log(projects.length) %>
     <div class="medium-header">Viewing Tasks for:</div>
     <form action="/fdjslka" method="GET" id="projectsFormProjectsPage">
-      <% if (projects.length != 0) { %>
       <select class="dropdown" id="selectedProject2" onchange="updateFormAction('projectsFormProjectsPage', 'selectedProject2')">
         <option id="projects-default-form-select" value="/projects" selected="true" disabled="true">--</option>
         <% for (let i = 0; i < projects.length; i++) {%>
@@ -24,17 +28,13 @@
 
     <% } else { %>
     <div class="row mt-3 mx-3">
-      -- No projects --
+      <div class="medium-header">
+        -- No projects --
+      </div>
     </div>
 
     <% } %>
   </div>
 
-  <div class="projects-item-d1">
-    <div class="row my-3">
-      <span class="col-3 mx-3">
-        <a class="blue-link" href="/tasks">View All Tasks</a>
-      </span>
-    </div>
-  </div>
+
 </div>

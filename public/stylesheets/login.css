@@ -48,12 +48,12 @@
 
 .login-form-item-a{
   grid-area: a6;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 .login-form-item-b{
   grid-area: b6;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 .login-form-item-c{
@@ -64,4 +64,9 @@
 .login-form-item-d{
   grid-area: d6;
   margin-bottom: 2%;
+}
+
+.login-form-card{
+  padding: 10% 7% 8% 7%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

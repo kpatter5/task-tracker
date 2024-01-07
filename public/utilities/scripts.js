@@ -4,6 +4,12 @@ function confirmDelete()
     return result;
 }
 
+function confirmDeleteAndUpdateFormAction(formId, selectId)
+{
+    updateFormAction(formId, selectId);
+    return confirmDelete();
+}
+
 function updateFormAction(formId, selectId)
 {
     const projectsForm = document.getElementById(formId);

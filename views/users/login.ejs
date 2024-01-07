@@ -6,24 +6,27 @@
   </div>
 
   <div class="login-item-b">
-    <form action="/login" method="POST" class="validated-form" novalidate>
-      <div class="login-form-item-a">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" name="username" required>
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+    <div class="login-form-card">
+      <form action="/login" method="POST" class="validated-form" novalidate>
+        <div class="login-form-item-a">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" name="username" required>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
 
-      <div class="login-form-item-b">
-        <label for="Password" class="form-label">Password</label>
-        <input type="password" class="form-control" name="password" required>
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+        <div class="login-form-item-b">
+          <label for="Password" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" required>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
 
-      <div class="login-form-item-c">
-        <button class="blue-button mt-2">Submit</button>
-        <button type="button" class="magenta-button"><a href="/register">Register</a></button>
-      </div>
-    </form>
+        <div class="login-form-item-c mt-4">
+          <button class="blue-button">Submit</button>
+          <button type="button" class="dark-blue-button"><a href="/register">Register</a></button>
+        </div>
+      </form>
+    </div>
+
   </div>
 
 </div>
