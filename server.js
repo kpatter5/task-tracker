@@ -82,7 +82,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 // Log each request to console
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
 
 // Sessions and passport (user logins)
 app.use(session(sessionConfig)); 

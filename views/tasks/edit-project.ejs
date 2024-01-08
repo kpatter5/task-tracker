@@ -6,7 +6,6 @@
   </div>
 
   <div class="tasks-item-c">
-    <% console.log(task) %>
     <form action="/tasks/<%=task._id%>/edit" method="POST" id="task-form-grid-container" class="validated-form" novalidate>
       <div class="task-form-item-h1">
         <!-- HEADER ROW: Left margin to align with ol -->
@@ -18,7 +17,7 @@
       </div>
 
       <div class="task-form-item-h3">
-        <h6 class="black-header">% Complete</h6>
+        <h6 class="black-header">Complete</h6>
       </div>
 
       <div class="task-form-item-h4">

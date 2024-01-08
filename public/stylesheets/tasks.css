@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
-    grid-column-gap: 1%;
+    grid-column-gap: 20px;
     grid-template-areas: "a a a a"
     "b b b b"
     "g g g g"
@@ -30,7 +30,7 @@
     "e e e e"
     "f f f f"
     "h h h h"; 
-    padding: 2% 15% 0% 15%;
+    padding: 2% 10% 0% 10%;
 }
 
 .tasks-item-a{
@@ -57,6 +57,7 @@
 
 .tasks-item-d{
     grid-area: d;
+    padding: 2px 0% 2px 0;
 }
 
 .tasks-item-d ol li {

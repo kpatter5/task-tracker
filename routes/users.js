@@ -72,7 +72,6 @@ router.get('/settings', userLoggedIn, (req, res) => {
 })
 
 router.delete('/user', userLoggedIn, catchAsync(async(req, res, next) => {
-    console.log(req.user);
     if (!req.user)
         return next(new CustomError(500, 'User does not exist'));
 

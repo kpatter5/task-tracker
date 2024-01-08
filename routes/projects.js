@@ -67,7 +67,8 @@ router.get('/edit', userLoggedIn, catchAsync(async(req, res, next) =>
     const user = await User.findOne({username: req.user.username});
     const projects = await Project.find({user: user._id});
     if (!projects)
-        console.log("No projects...");
+        return next(new CustomError(500, 'Could not find project'));
+
      
     res.render('projects/edit', {projects});
 }))

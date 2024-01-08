@@ -64,7 +64,7 @@ router.post('/:pid/new', userLoggedIn, catchAsync(async(req, res, next) => {
 
     const project = await Project.findOne({_id: pid, user: user._id});
     if (!project)
-        console.log("Could not find project");
+        return next(new CustomError(500, 'Could not find project'));
 
     const newTask = new Task({name:name, owner:owner, percentComplete:percentComplete, dueDate:dueDate, project: project._id, user: user._id});
     const saved = await newTask.save();
@@ -77,13 +77,11 @@ router.post('/:pid/new', userLoggedIn, catchAsync(async(req, res, next) => {
 /* Edit a task from Project View page  */
 router.get('/:tid/edit', userLoggedIn, catchAsync(async(req, res, next) => {
     const {tid} = req.params;
-    console.log("task id = ", tid);
     const user = await User.findOne({username: req.user.username});
     if (!user)
         return next(new CustomError(500, 'Could not find user'));
 
     const task = await Task.findOne({_id: tid, user: user._id});
-    console.log("task=", task);
     if (!task)
         return next(new CustomError(500, 'Could not find task'));
     res.render('tasks/edit-project', {task});
@@ -167,7 +165,7 @@ router.delete('/:tid', userLoggedIn, async(req, res, next) => {
 
     const foundTask = await Task.findOneAndDelete({_id: tid, user: user._id});
     if (!foundTask)
-        console.log("Could not find task");
+        return next(new CustomError(500, 'Could not find task'));
 
     if (!foundTask)
         return next(new CustomError(500, 'Could not delete task'));

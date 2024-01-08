@@ -1,8 +1,5 @@
 const taskContainer2 = document.getElementById('all-tasks-container');
-console.log("taskContainer2=", taskContainer2);
 const nextButton2 = document.getElementById('all-tasks-next-button'); 
-console.log("nextButton2=", nextButton2);
-
 const prevButton2 = document.getElementById('all-tasks-prev-button'); 
 const tasksPagination2 = document.getElementById('all-tasks-pagination'); 
 
@@ -12,7 +9,7 @@ var totalPages2;
 var currentPage2;
 if(taskContainer2 && nextButton2 && prevButton2)
 {
-    items2 = Array.from(taskContainer2.getElementsByClassName('list-group-item all-tasks')); 
+    items2 = Array.from(taskContainer2.getElementsByClassName('table-row-card all-tasks')); 
 
     if (items2 && items2.length)
     {
@@ -45,10 +42,8 @@ if(taskContainer2 && nextButton2 && prevButton2)
  
 // Function to display items for a specific page 
 function displayPage2(page) { 
-    console.log("inside displayPage2")
     const startIndex2 = (page - 1) * itemsPerPage2; 
     const endIndex2 = startIndex2 + itemsPerPage2; 
-    console.log("items2=",items2);
 
     items2.forEach((item, index) => { 
         if (index >= startIndex2 && index < endIndex2) { 

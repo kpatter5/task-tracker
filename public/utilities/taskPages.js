@@ -9,7 +9,7 @@ var totalPages;
 var currentPage;
 if(taskContainer && nextButton && prevButton)
 {
-    items = Array.from(taskContainer.getElementsByClassName('list-group-item task')); 
+    items = Array.from(taskContainer.getElementsByClassName('table-row-card task')); 
 
     if (items && items.length)
     {
@@ -18,7 +18,6 @@ if(taskContainer && nextButton && prevButton)
     
         // Event listener for "Next" button 
         nextButton.addEventListener('click', () => { 
-            console.log("next button clicked");
             if (currentPage < totalPages) { 
                 currentPage++; 
                 displayPage(currentPage); 

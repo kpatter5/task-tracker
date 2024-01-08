@@ -18,7 +18,7 @@
     </span>
   </div>
 
-  <div class="tasks-item-d">
+  <div class="tasks-item-d table-row-card">
     <div class="tasks-list-container">
       <% if (tasks.length == 0) { %>
       <div class="tasks-list-item-a1">
@@ -38,7 +38,7 @@
       </div>
 
       <div class="tasks-list-item-c1">
-        <span class="black-header">Progress</span>
+        <span class="black-header">Complete</span>
       </div>
 
       <div class="tasks-list-item-d1">
@@ -54,7 +54,7 @@
     <!-- TASK LIST -->
     <ol class="list-group">
       <% for (let i = 0; i < tasks.length; i++) { %>
-      <li class="list-group-item all-tasks">
+      <li class="table-row-card all-tasks">
         <div class="tasks-list-container">
           <div class="tasks-list-item-a1">
             <%=tasks[i].name%>

@@ -18,16 +18,15 @@
 
 /* Projects page grid */
 .projects-layout-container{
-    margin-left: 2%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
-    grid-gap: 1%;
+    grid-column-gap: 20px;
     grid-template-areas: "a1 a1 a1 a1"
     "b1 b1 b1 b1"
     "c1 c1 c1 c1"
     "d1 d1 d1 d1"; 
-    padding: 2% 15% 0% 15%;
+    padding: 2% 10% 0% 10%;
 }
 
 .projects-item-a1{
