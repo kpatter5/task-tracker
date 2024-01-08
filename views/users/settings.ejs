@@ -6,10 +6,35 @@
   </div>
 
   <div class="home-item-d">
-    <form action="/user?_method=DELETE" method="POST" class="validated-form" novalidate>
-      <button class="btn btn-outline-danger" onclick="return confirmDelete()">Delete Account</button>
-    </form>
+    <div class="settings-card">
+      <form action="/email?_method=PATCH" method="POST" class="validated-form" novalidate>
+        <div class="row mb-5">
+          <div class="row">
+            <label for="updateAccount" class="form-label">Update Email</label>
+          </div>
+          <div class="row">
+            <span class="col-7">
+              <input type="email" class="form-control" name="email" required>
+            </span>
+            <span class="col-auto">
+              <button class="blue-button">Save</button>
+            </span>
+          </div>
 
+        </div>
+      </form>
+
+      <form action="/user?_method=DELETE" method="POST" class="validated-form" novalidate>
+        <div class="row">
+          <span class="col-auto me-3">
+            <label for="deleteAccount" class="form-label">Delete Account</label>
+          </span>
+          <span class="col-auto">
+            <button class="btn btn-outline-danger" onclick="return confirmDelete()">Delete</button>
+          </span>
+        </div>
+      </form>
+
+    </div>
   </div>
-
 </div>

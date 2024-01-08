@@ -86,6 +86,8 @@
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400px;
     color: var(--brand-color3);
+    margin: 0;
+    padding: 0;
 }
 
 .light-blue-button{
@@ -269,3 +271,13 @@ a.black-link:hover{
     font-weight: 600px;
     font-size: 18px;
 }
+
+.form-card{
+    padding: 10% 10% 8% 10%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .settings-card{
+    padding: 5% 7% 7% 7%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }

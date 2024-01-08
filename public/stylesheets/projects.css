@@ -13,7 +13,6 @@
     --brand-color10: #B15EFF;
     --brand-color11: #FFFB73;
     --brand-color12: #F5EAEA;
-
     --brand-color2a: #99d0e9;
   }
 
@@ -28,6 +27,7 @@
     "b1 b1 b1 b1"
     "c1 c1 c1 c1"
     "d1 d1 d1 d1"; 
+    padding: 2% 15% 0% 15%;
 }
 
 .projects-item-a1{

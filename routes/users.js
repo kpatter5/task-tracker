@@ -100,4 +100,20 @@ router.delete('/user', userLoggedIn, catchAsync(async(req, res, next) => {
     res.redirect('/');
 }))
 
+router.patch('/email', userLoggedIn, catchAsync(async(req, res, next) => {
+    if (!req.user)
+        return next(new CustomError(500, 'Could not update your email'));
+    
+    const { email } = req.body;
+    if (!email)
+        return next(new CustomError(500, 'Email cannot be empty'));
+
+    const user = await User.findOneAndUpdate({username: req.user.username}, {email: email});
+    if (!user)
+        return next(new CustomError(500, 'Could not update your email'));
+
+   req.flash("success", "Email successfully changed");
+   res.redirect('/');
+}))
+
 module.exports = router;
