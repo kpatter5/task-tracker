@@ -115,4 +115,9 @@ router.patch('/email', userLoggedIn, catchAsync(async(req, res, next) => {
    res.redirect('/');
 }))
 
+router.use((err, req, res, next) => {
+    const {statusCode = 500, message = "Something went wrong in tasks"} = err;
+    return next(new CustomError(statusCode, message));
+})
+
 module.exports = router;

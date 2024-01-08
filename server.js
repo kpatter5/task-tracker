@@ -95,6 +95,8 @@ app.use(flash());
 const taskRoutes = require('./routes/tasks');
 const projectRoutes = require('./routes/projects');
 const userRoutes = require('./routes/users');
+const commentRoutes = require('./routes/comments');
+
 
 // User login middleware
 app.use(passport.initialize());
@@ -116,6 +118,8 @@ app.use(function (req, res, next) {
 app.use('/tasks', taskRoutes);
 app.use('/projects', projectRoutes);
 app.use('/', userRoutes);
+app.use('/comment', commentRoutes);
+
 
 // Serve static files from public directory
 app.use(express.static("public"));
