@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-auto-rows: minmax(100px, auto);
-  grid-template-areas: "a6 b6 b6 b6"
+  grid-template-areas: "a6 b6 b6 ."
   "a6 c6 c6 . "
   "a6 d6 d6 . "
   "a6 . . .";
@@ -13,29 +13,30 @@
   background-image: url("/images/laptop.jpg");
   opacity: 0.5;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
   grid-auto-rows: 1fr;
   min-height: 1200px;
   background-color: gray;
+  height: 100vh;
 }
 
 .contact-item-b{
   grid-area: b6;
   margin-top: 5%;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .contact-item-c{
   grid-area: c6;
   margin-top: 5%;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .contact-item-d{
   grid-area: d6;
   margin-top: 7%;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 div.contact{
@@ -55,7 +56,7 @@ div.contact{
   "d7 d7 d7 ."
   "e7 e7 e7 e7"
   "f7 f7 . .";
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   padding: 5% 5% 5% 5%;
 }
 
